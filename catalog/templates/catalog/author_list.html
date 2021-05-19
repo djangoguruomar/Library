@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Author List</h1>
+
+{% for author in author_list %}
+
+<li>{{author.first_name}}</li>
+
+{% for book in author.book_set.all  %}
+{{book.title}}
+
+{% endfor %}
+
+
+
+{% endfor %}
+   
+
+
+    
+{% endblock content %}
+
+
+
+
+
+
+
+
+
